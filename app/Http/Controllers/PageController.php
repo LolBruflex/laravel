@@ -19,7 +19,7 @@ class PageController extends Controller {
     public function staff(){
 
         // 1) - come ritornare una view
-        return view('staff_',
+        return view('staff',
             [
                 'title' => 'Our Staff',
                 'staff' => $this->data
