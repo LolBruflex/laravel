@@ -13,7 +13,11 @@ use Illuminate\Http\Request;
 class HomeController
 {
     // tramite la il metodo input della class request, prendo parametri GET (Query String)
+    /* public function index(Request $request){
+         return 'Hello World! ' .$request->input('name');
+     }*/
+
     public function index(Request $request){
-        return 'Hello World! ' .$request->input('name');
+        return view('templates.layout');
     }
 }

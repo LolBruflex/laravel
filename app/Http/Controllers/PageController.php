@@ -7,8 +7,18 @@ use Illuminate\Http\Request;
 class PageController extends Controller {
 
     protected $data = [
-        'name' => 'Lorenzo',
-        'lastname' => 'Bruffa'
+        [
+            'name'     => 'Lorenzo',
+            'lastname' => 'Bruffa'
+        ],
+        [
+            'name'     => 'Leonardo',
+            'lastname' => 'Bruffa'
+        ],
+        [
+            'name'     => 'Parmenio',
+            'lastname' => 'Bruffa'
+        ]
     ];
 
     public function about(){
@@ -19,7 +29,7 @@ class PageController extends Controller {
     public function staff(){
 
         // 1) - come ritornare una view
-        return view('staff',
+        return view('templates.staff',
             [
                 'title' => 'Our Staff',
                 'staff' => $this->data
@@ -41,5 +51,12 @@ class PageController extends Controller {
         $title = 'Our Staff';
 
         return view('staff', compact('title','staff'));*/
+    }
+
+    public function blog(){
+
+        // 1) - come ritornare una view
+        return view('templates.blog');
+
     }
 }
