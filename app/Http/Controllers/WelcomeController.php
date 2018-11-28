@@ -8,6 +8,6 @@ class WelcomeController extends Controller
 {
     public function welcome($name="", $lastname="", $age=""){
 
-        return '<h1>Hello '.$name.' '.$lastname.' you are '.$age.' old!</h1>';
+        return '<h1>Hello_ '.$name.' '.$lastname.' you are '.$age.' old!</h1>';
     }
 }
